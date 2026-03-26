@@ -43,7 +43,9 @@
     "humao.rest-client",
     "ms-ossdata.vscode-database",
     "alexcvzz.vscode-sqlite",
-    "keyshout.sqlite-db-viewer"
+    "keyshout.sqlite-db-viewer",
+    "cweijan.vscode-database-client2",
+    "tal7aouy.icons"
   ],
   "postCreateCommand": "conda env create -f environment.yml || conda env update -f environment.yml",
   "remoteUser": "root"
