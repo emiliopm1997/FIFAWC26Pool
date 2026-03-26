@@ -1,0 +1,35 @@
+name: wc_pool_env
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # API
+  - flask
+  - flask-restful
+
+  # Database
+  - sqlalchemy<2.0
+
+  # Jupyter
+  - notebook
+  - ipykernel
+  - pandas
+  - ipython-sql
+
+  # Visualization
+  - matplotlib
+
+  # Formatting & linting
+  - black
+  - flake8
+  - isort
+
+  # Dev tools
+  - requests
+
+  - pip:
+    - python-dotenv

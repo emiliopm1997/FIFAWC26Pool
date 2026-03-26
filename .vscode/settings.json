@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+
+  "isort.args": ["--profile", "black"],
+
+  "autoDocstring.docstringFormat": "numpy",
+
+  "notebook.formatOnSave.enabled": true
+}
