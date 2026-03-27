@@ -1,3 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fifa-wc-2026-pool"
+version = "0.1.0"
+description = "FIFA World Cup 2026 Pool API"
+authors = [
+    { name = "Emilio Padron", email = "emiliopm1997@gmail.com" },
+    { name = "Marco Gonzalez", email = "other@email.com" }
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+# -------------------------
+# Formatting & Linting
+# -------------------------
+
 [tool.black]
 line-length = 80
 
@@ -8,3 +28,4 @@ line_length = 80
 [tool.flake8]
 max-line-length = 80
 extend-ignore = ["E203", "W503"]
+docstring-convention = "numpy"

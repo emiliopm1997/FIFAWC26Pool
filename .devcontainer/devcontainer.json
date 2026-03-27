@@ -45,7 +45,8 @@
     "alexcvzz.vscode-sqlite",
     "keyshout.sqlite-db-viewer",
     "cweijan.vscode-database-client2",
-    "tal7aouy.icons"
+    "tal7aouy.icons",
+    "Postman.postman-for-vscode"
   ],
   "postCreateCommand": "conda env create -f environment.yml || conda env update -f environment.yml",
   "remoteUser": "root"
