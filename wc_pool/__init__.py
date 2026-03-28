@@ -1,10 +1,17 @@
 from flask import Flask
-from wc_pool.routes import apply_route
+from wc_pool.routes import register_routes
 
 
-def start_pool():
+def start_pool() -> Flask:
+    """Create and configure the Flask application instance.
+
+    Returns
+    -------
+    Flask
+        Configured Flask application instance.
+    """
     app = Flask(__name__)
 
-    apply_route(app)
+    register_routes(app)
 
     return app
