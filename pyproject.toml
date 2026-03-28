@@ -27,5 +27,5 @@ line_length = 80
 
 [tool.flake8]
 max-line-length = 80
-extend-ignore = ["E203", "W503"]
+extend-ignore = ["D100", "E203", "W503"]
 docstring-convention = "numpy"

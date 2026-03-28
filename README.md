@@ -47,7 +47,9 @@ This project is intended for **personal use within a small group of friends**.
 
 ## 📦 Project Setup
 
-### 1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd fifa-wc-2026-pool
+### 1. Set environment variables
+
+Create a **.env** file with the following variables:
+
+- GIT_USER_NAME='<Full Name>'
+- GIT_USER_EMAIL='<email>'
