@@ -31,4 +31,5 @@ def register_routes(app: Flask):
             JSON response containing a status message.
         """
         # logger.info("Test log...")
+        print("test")
         return jsonify({"message": "API is working"})
