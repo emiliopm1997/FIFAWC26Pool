@@ -1,4 +1,7 @@
 from flask import Flask, jsonify
+from wc_pool.utils.logger import Logger
+
+logger = Logger().get_logger()
 
 
 def register_routes(app: Flask):
@@ -27,4 +30,5 @@ def register_routes(app: Flask):
         Response
             JSON response containing a status message.
         """
+        logger.info("Test log...")
         return jsonify({"message": "API is working"})
