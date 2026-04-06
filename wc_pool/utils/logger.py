@@ -25,7 +25,7 @@ class Logger:
         Logger
             Singleton instance of the Logger class.
         """
-        if cls._instance is None:
+        if cls._instance is not None:
             cls._instance = super(Logger, cls).__new__(cls)
             cls._instance._initialize_logger()
         return cls._instance
@@ -80,6 +80,4 @@ class Logger:
         logging.Logger
             Configured logger instance.
         """
-        if self._logger is None:
-            raise RuntimeError("Logger has not been initialized")
         return self._logger
