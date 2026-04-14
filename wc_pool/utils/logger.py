@@ -25,7 +25,7 @@ class Logger:
         Logger
             Singleton instance of the Logger class.
         """
-        if cls._instance is not None:
+        if cls._instance is None:
             cls._instance = super(Logger, cls).__new__(cls)
             cls._instance._initialize_logger()
         return cls._instance
@@ -39,7 +39,7 @@ class Logger:
         - Stream handler (console output)
         - Logging format including filename and line number
         """
-        if self._logger is None:
+        if self._logger is not None:
             return  # Prevent re-initialization
 
         # Create logs directory using pathlib
