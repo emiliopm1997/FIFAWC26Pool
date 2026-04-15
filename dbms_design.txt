@@ -1,0 +1,33 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Matches {
+  match_id integer [primary key]
+  group char
+  home_team varchar
+  away_team varchar
+  home_goals integer
+  away_goals integer
+  outcome char
+}
+
+Table Participants {
+  participant_id integer [primary key]
+  participant_name varchar
+  has_paid bool
+  score integer
+}
+
+Table Predictions {
+  prediction_id integer [primary key]
+  participant_id integer [not null]
+  match_id integer [not null]
+  home_goals integer
+  away_goals integer
+  match_outcome char
+  prediction_outcome char
+}
+
+Ref: Participants.participant_id < Predictions.participant_id
+Ref: Matches.match_id < Predictions.match_id
+
