@@ -15,7 +15,6 @@ Table Participants {
   participant_id integer [primary key]
   participant_name varchar
   has_paid bool
-  score integer
 }
 
 Table Predictions {
@@ -24,7 +23,6 @@ Table Predictions {
   match_id integer [not null]
   home_goals integer
   away_goals integer
-  match_outcome char
   prediction_outcome char
 }
 
