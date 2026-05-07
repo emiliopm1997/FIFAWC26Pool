@@ -1,6 +1,7 @@
-from pathlib import Path
 import logging
 from typing import Optional
+
+from .paths import LOG_FILE_PATH
 
 
 class Logger:
@@ -42,12 +43,6 @@ class Logger:
         if self._logger is not None:
             return  # Prevent re-initialization
 
-        # Create logs directory using pathlib
-        log_dir = Path.cwd() / "logs"
-        log_dir.mkdir(exist_ok=True)
-
-        log_file = log_dir / "wc_pool_logger.log"
-
         self._logger = logging.getLogger("wc_pool_logger")
         self._logger.setLevel(logging.INFO)
 
@@ -55,11 +50,12 @@ class Logger:
         if not self._logger.handlers:
 
             formatter = logging.Formatter(
-                "%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s"
+                "%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d -"
+                " %(message)s"
             )
 
             # File handler (append mode by default)
-            file_handler = logging.FileHandler(log_file)
+            file_handler = logging.FileHandler(LOG_FILE_PATH)
             file_handler.setLevel(logging.INFO)
             file_handler.setFormatter(formatter)
 
